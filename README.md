@@ -3,9 +3,9 @@
 ## SETUP TUTORIALS
 
 ```
-git clone <url>
-cd dir
-pip install requirement.py
+git clone git@github.com:jonathanfelicity/mentorship.git
+cd mentorship
+pip install requirements.txt
 python migration.py
 python run.py
 ```

@@ -1,4 +1,3 @@
-from re import A
 from flask import render_template, request, url_for, redirect, session
 from . import app, db
 from .models import User
@@ -53,7 +52,7 @@ def login():
     if Authenticated():
         return redirect(url_for('dashboard'))
     if request.method == 'POST':
-        user = User.query.filter_by(email='jonathanfelicity@mail.com').first()
+        user = User.query.filter_by(email=request.form.get("email")).first()
         if user:
             salt = bcrypt.gensalt()
             password =  bytes(request.form.get("password"), 'utf-8')
