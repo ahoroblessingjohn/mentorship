@@ -1,0 +1,40 @@
+{% extends 'auth/layout.html' %}
+{% block main %}
+<div id="login">
+    <aside>
+        <figure>
+            <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='assets/img/logo.png') }}" width="149" height="42" alt=""></a>
+        </figure>
+          <form method="post">
+            <div class="access_social">
+                <a href="#0" class="social_bt facebook">Login with Facebook</a>
+                <a href="#0" class="social_bt google">Login with Google</a>
+                <a href="#0" class="social_bt linkedin">Login with Linkedin</a>
+            </div>
+            <div class="divider"><span>Or</span></div>
+            <div class="form-group">
+                <span class="input">
+                <input class="input_field" type="email" name="email" autocomplete="off" name="email">
+                    <label class="input_label">
+                    <span class="input__label-content">Your email</span>
+                </label>
+                </span>
+
+                <span class="input">
+                <input class="input_field" type="password" name="password" autocomplete="new-password" name="password">
+                    <label class="input_label">
+                    <span class="input__label-content">Your password</span>
+                </label>
+                </span>
+                <div id="pass-info" class="weakpass">Passwords do not match!</div>
+                <small><a href="#0">Forgot password?</a></small>
+            </div>
+            <button class="btn_1 rounded full-width add_top_60">Login to Udema</button>
+            <a href="#0" ></a>
+            <div class="text-center add_top_10">New to Udema? <strong><a href="{{ url_for('signup') }}">Sign up!</a></strong></div>
+        </form>
+        <div class="copy">© 2021 Udema</div>
+    </aside>
+</div>
+<!-- /login -->
+{% endblock main %}
