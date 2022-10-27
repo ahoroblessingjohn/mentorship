@@ -5,7 +5,7 @@
 ```
 git clone git@github.com:jonathanfelicity/mentorship.git
 cd mentorship
-pip install requirements.txt
+pip install -r requirements.txt
 python migration.py
 python run.py
 ```
